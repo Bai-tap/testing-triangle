@@ -111,4 +111,16 @@ public class TestingTriangleTest {
 
         Assert.assertEquals(actual, expected);
     }
+
+    @Test
+    public void anEdgeEqualZero() {
+        double a = 0;
+        double b = 3.4;
+        double c = 3.4;
+
+        String actual = TestingTriangle.isTriangle(a, b, c);
+        String expected = "Not a triangle";
+
+        Assert.assertEquals(actual, expected);
+    }
 }
