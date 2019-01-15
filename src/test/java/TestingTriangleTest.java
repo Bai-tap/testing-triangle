@@ -54,12 +54,12 @@ public class TestingTriangleTest {
 
     @Test
     public void isATriangle() {
-        double a = 1;
+        double a = 3;
         double b = 2;
         double c = 4;
 
         String actual = TestingTriangle.isTriangle(a, b, c);
-        String expected = "Not a triangle";
+        String expected = "Is a triangle";
 
         Assert.assertEquals(actual, expected);
     }
