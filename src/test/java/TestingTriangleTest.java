@@ -40,5 +40,15 @@ public class TestingTriangleTest {
         Assert.assertEquals(actual, expected);
     }
 
+    @Test
+    public void allEdgeLessThanZero() {
+        double a = -1;
+        double b = -2;
+        double c = -1;
 
+        String actual = TestingTriangle.isTriangle(a, b, c);
+        String expected = "Not a triangle";
+
+        Assert.assertEquals(actual, expected);
+    }
 }
