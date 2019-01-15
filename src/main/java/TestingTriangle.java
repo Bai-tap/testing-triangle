@@ -4,21 +4,17 @@ public class TestingTriangle {
     }
 
     public static String isTriangle(double a, double b, double c) {
-        String isTriangle = "";
+        String isTriangle = "Not a triangle";
         String isRightTriangle;
         if (a > 0 && b > 0 && c > 0) {
-            if ((a + b > c) || (a + c > b) || (b + c > a) || (a - b < c) || (a - c < b) ||
-                    (b - a < c) || (b - c < a) || (c - a < b) || (c - b < a)) {
+            if ((a + b > c) && (a + c > b) && (b + c > a)) {
                 isTriangle = "Is a triangle";
-                if (a == b && b == c) {
-                    isRightTriangle = "Is a right triangle";
+                if (a == b || b == c || a == c) {
+                    isRightTriangle = "Is a isosceles triangle";
                     return isRightTriangle;
                 }
             }
-        } else {
-            isTriangle = "Not a triangle";
         }
-
         return isTriangle;
     }
 }
