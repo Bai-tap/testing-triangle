@@ -99,4 +99,16 @@ public class TestingTriangleTest {
 
         Assert.assertEquals(actual, expected);
     }
+
+    @Test
+    public void isAEquilateralTriangle() {
+        double a = 3.4;
+        double b = 3.4;
+        double c = 3.4;
+
+        String actual = TestingTriangle.isTriangle(a, b, c);
+        String expected = "Is a equilateral triangle";
+
+        Assert.assertEquals(actual, expected);
+    }
 }
