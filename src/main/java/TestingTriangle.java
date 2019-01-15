@@ -1,6 +1,18 @@
+import java.util.Scanner;
+
 public class TestingTriangle {
     public static void main(String[] args) {
+        System.out.println("Remember just input real number or integers");
+        System.out.print("Enter edge a: ");
+        double a = inputEdge();
 
+        System.out.print("Enter edge b: ");
+        double b = inputEdge();
+
+        System.out.print("Enter edge c: ");
+        double c = inputEdge();
+
+        System.out.println(isTriangle(a, b, c));
     }
 
     public static String isTriangle(double a, double b, double c) {
@@ -18,5 +30,10 @@ public class TestingTriangle {
             }
         }
         return isTriangle;
+    }
+
+    public static double inputEdge() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextDouble();
     }
 }
